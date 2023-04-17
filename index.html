@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapogian Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loader()" style="margin:0;">
+
+    <div id="loader"></div>
+
+    <div style="display:none;" id="loaderDiv" class="animation">
+
+        <h1 class="title">Kapogian Clicker</h1>
+
+        <h1 id="clickcount">Clicks: 0</h1>
+
+        <button class="click" onclick="add()">Click</button>
+
+        <h1>Status:</h1>
+
+        <h1 id="current-per-click">1 per click</h1>
+
+        <h1 id="upgrade-text">Next upgrade: 200 clicks</h1>
+
+        <button class="upgrade" onclick="upgrade()">Upgrade</button>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

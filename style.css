@@ -1,0 +1,83 @@
+/*loader*/
+
+#loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 80px;
+  height: 80px;
+  border: 10px solid #ffffff;
+  border-radius: 50%;
+  border-top: 10px solid #f0adc5;
+  animation: spin 1s linear infinite;
+  transform-origin: center center;
+  animation-fill-mode: forwards;
+  margin: -40px 0 0 -40px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+#loaderDiv {
+  display: none;
+  text-align: center;
+}
+
+.animation {
+  position: relative;
+  animation: animation 1s;
+
+}
+
+@keyframes animation {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom: 0px; opacity: 1}
+}
+
+/*main game*/
+
+@font-face {
+  font-family: Metropolis;
+  src: url(fonts/Metropolis-Bold.otf);
+}
+
+button {
+  display: inline-block;
+  padding: 22px 42px;
+  font-size: 32px;
+  cursor: pointer;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  color: #fff;
+  background-color: #f0adc5;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 9px #999;
+  font-family: 'Metropolis';
+}
+
+button:active {
+  background-color: #df7298;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+h1,h3 {
+  font-family: 'Metropolis';
+  text-align: center;
+}
+
+h1#clickcount {
+  margin-top: 130px;
+  font-size: 40px;
+}
+
+h1.title {
+  margin-top: 70px;
+  font-size: 60px;
+}
