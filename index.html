@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kapogian Clicker</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pages/main-game/style.css">
 </head>
-<body onload="loader()" style="margin:0;">
+<body onload="playAudio()">
 
     <div id="loader"></div>
 
@@ -25,9 +25,10 @@
         <h1 id="upgrade-text">Next upgrade: 200 clicks</h1>
 
         <button class="upgrade" onclick="upgrade()">Upgrade</button>
+
+        <a href="pages/update-info/update-info.html"><p>v1.5</p></a>
     </div>
 
-
-    <script src="script.js"></script>
+    <script src="pages/main-game/script.js"></script>
 </body>
 </html>

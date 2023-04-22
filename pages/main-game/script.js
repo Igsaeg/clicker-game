@@ -1,31 +1,20 @@
-//loader
+// Constants
+const upgradeClicks = Array.from({ length: 1000000 }, (_, i) => i * 200);
+const upgradeValues = Array.from({ length: 1000000 }, (_, i) => i);
 
-let timer;
-
-function loader() {
-  timer = setTimeout(showPage, 5000);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("loaderDiv").style.display = "block";
-}
-
-//main game
-
-let clicks = parseInt(localStorage.getItem('clicks')) || 0;
-let noOfClicks = parseInt(localStorage.getItem('noOfClicks')) || 1;
-let type = parseInt(localStorage.getItem('type')) || 1;
-
-const upgradeClicks = [0, 200, 500, 1000, 1500, 2000, 2500, 3000];
-const upgradeValues = [0, 1, 2, 5, 10, 15, 20, 25, 30];
-
+// Elements
 const clickCountElement = document.getElementById("clickcount");
 const currentPerClickElement = document.getElementById("current-per-click");
 const upgradeTextElement = document.getElementById("upgrade-text");
 const clickerElement = document.getElementById("clicker");
 const upgradeElement = document.getElementById("upgrade");
 
+// Variables
+let clicks = parseInt(localStorage.getItem('clicks')) || 0;
+let noOfClicks = parseInt(localStorage.getItem('noOfClicks')) || 1;
+let type = parseInt(localStorage.getItem('type')) || 1;
+
+// Functions
 function saveProgress() {
   localStorage.setItem('clicks', clicks);
   localStorage.setItem('noOfClicks', noOfClicks);
@@ -37,10 +26,20 @@ function updateUpgradeText() {
   upgradeTextElement.innerHTML = `Next upgrade: ${nextUpgradeClicks} clicks`;
 }
 
+
+
+function playAudio() {
+  var bgSound = new Audio('../../audio/background.mp3');
+  bgSound.loop = true;
+	bgSound.play();
+}
+
 function add() {
   clicks += noOfClicks;
   clickCountElement.innerHTML = `Clicks: ${clicks}`;
   saveProgress();
+  const clickSound = new Audio("audio/click.mp3");
+  clickSound.play();
 }
 
 function upgrade() {
@@ -53,12 +52,21 @@ function upgrade() {
     saveProgress();
     updateUpgradeText();
     clickCountElement.innerHTML = `Clicks: ${clicks}`;
+    const upgradeSound = new Audio("audio/upgrade.mp3");
+    upgradeSound.play();
   }
 }
 
-updateUpgradeText();
-clickCountElement.innerHTML = `Clicks: ${clicks}`;
-currentPerClickElement.innerHTML = `${noOfClicks} per click`;
+function init() {
+  updateUpgradeText();
+  clickCountElement.innerHTML = `Clicks: ${clicks}`;
+  currentPerClickElement.innerHTML = `${noOfClicks} per click`;
+}
 
-clickerElement.addEventListener("click", add);
-upgradeElement.addEventListener("click", upgrade);
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("loaderDiv").style.display = "block";
+    init();
+  }, 3000);
+});
