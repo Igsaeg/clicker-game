@@ -26,14 +26,6 @@ function updateUpgradeText() {
   upgradeTextElement.innerHTML = `Next upgrade: ${nextUpgradeClicks} clicks`;
 }
 
-
-
-function playAudio() {
-  var bgSound = new Audio('../../audio/background.mp3');
-  bgSound.loop = true;
-	bgSound.play();
-}
-
 function add() {
   clicks += noOfClicks;
   clickCountElement.innerHTML = `Clicks: ${clicks}`;
