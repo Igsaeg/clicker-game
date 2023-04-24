@@ -28,7 +28,7 @@ function add() {
   clicks += noOfClicks;
   clickCountElement.innerHTML = `Clicks: ${clicks}`;
   saveProgress();
-  const clickSound = new Audio("audio/click.mp3");
+  const clickSound = new Audio("../../audio/click.mp3");
   clickSound.play();
 }
 
@@ -42,7 +42,7 @@ function upgrade() {
     saveProgress();
     updateUpgradeText();
     clickCountElement.innerHTML = `Clicks: ${clicks}`;
-    const upgradeSound = new Audio("audio/upgrade.mp3");
+    const upgradeSound = new Audio("../../audio/upgrade.mp3");
     upgradeSound.play();
   }
 }
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("loader").style.display = "none";
     document.getElementById("loaderDiv").style.display = "block";
     init();
-    const clickSound = new Audio("audio/click.mp3");
-    const upgradeSound = new Audio("audio/upgrade.mp3");
+    const clickSound = new Audio("../../audio/click.mp3");
+    const upgradeSound = new Audio("../../audio/upgrade.mp3");
   }, 3000);
 });
