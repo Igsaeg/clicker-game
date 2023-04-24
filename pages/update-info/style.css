@@ -70,21 +70,24 @@ button:active {
   transform: translateY(4px);
 }
 
-.back {
-  margin-top: 30px;
-  margin-bottom: 50px;
+h1.title {
+  margin-top: 75px;
+  font-size: 55px;
+  margin-bottom: 112px;
 }
 
-h1.title {
-  margin-top: 70px;
-  font-size: 55px;
-  margin-bottom: 130px;
+button#backButton {
+  margin-bottom: 10px;
 }
 
 p.textHeader {
-    font-size: 35px;
+  font-size: 35px;
 }
 
-p.text {
-    font-size: 28px;
+p.text, p.lastText {
+  font-size: 28px;
+}
+
+p.lastText {
+  margin-bottom: 100px;
 }

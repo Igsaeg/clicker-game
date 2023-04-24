@@ -1,13 +1,11 @@
 // Constants
-const upgradeClicks = Array.from({ length: 1000000 }, (_, i) => i * 200);
+const upgradeClicks = Array.from({ length: 1000000 }, (_, i) => i * 200 );
 const upgradeValues = Array.from({ length: 1000000 }, (_, i) => i);
 
 // Elements
-const clickCountElement = document.getElementById("clickcount");
-const currentPerClickElement = document.getElementById("current-per-click");
-const upgradeTextElement = document.getElementById("upgrade-text");
-const clickerElement = document.getElementById("clicker");
-const upgradeElement = document.getElementById("upgrade");
+const clickCountElement = document.getElementById("clickCount");
+const currentPerClickElement = document.getElementById("currentPerClick");
+const upgradeTextElement = document.getElementById("upgradeText");
 
 // Variables
 let clicks = parseInt(localStorage.getItem('clicks')) || 0;
@@ -55,10 +53,13 @@ function init() {
   currentPerClickElement.innerHTML = `${noOfClicks} per click`;
 }
 
+// Initialization
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     document.getElementById("loader").style.display = "none";
     document.getElementById("loaderDiv").style.display = "block";
     init();
+    const clickSound = new Audio("audio/click.mp3");
+    const upgradeSound = new Audio("audio/upgrade.mp3");
   }, 3000);
 });

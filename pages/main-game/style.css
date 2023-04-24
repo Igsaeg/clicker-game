@@ -7,7 +7,7 @@ body {
   font-family: 'Metropolis';
 }
 
-/*loader*/
+/* Loader */
 
 #loader {
   position: absolute;
@@ -47,7 +47,7 @@ body {
   text-align: center;
 }
 
-/*main game*/
+/* Main game */
 
 button {
   display: inline-block;
@@ -80,6 +80,10 @@ h1.title {
   margin-bottom: 130px;
 }
 
-h1#clickcount {
+h1#clickCount {
   font-size: 40px;
+}
+
+p.versionText {
+  margin-bottom: 60px;
 }

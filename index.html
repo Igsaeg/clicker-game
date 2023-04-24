@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/icon.png"/>
     <title>Kapogian Clicker</title>
     <link rel="stylesheet" href="pages/main-game/style.css">
 </head>
@@ -11,22 +12,18 @@
     <div id="loader"></div>
 
     <div style="display:none;" id="loaderDiv" class="animation">
-
         <h1 class="title">Kapogian Clicker</h1>
-
-        <h1 id="clickcount">Clicks: 0</h1>
+        <h1 id="clickCount">Clicks: 0</h1>
 
         <button class="click" onclick="add()">Click</button>
 
         <h1>Status:</h1>
-
-        <h1 id="current-per-click">1 per click</h1>
-
-        <h1 id="upgrade-text">Next upgrade: 200 clicks</h1>
+        <h1 id="currentPerClick">1 per click</h1>
+        <h1 id="upgradeText">Next upgrade: 200 clicks</h1>
 
         <button class="upgrade" onclick="upgrade()">Upgrade</button>
 
-        <a href="update-info.html"><p>v1.5</p></a>
+        <a href="update-info.html"><p class="versionText">v2.0</p></a>
     </div>
 
     <script src="pages/main-game/script.js"></script>
