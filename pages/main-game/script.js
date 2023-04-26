@@ -15,6 +15,7 @@ let clickersNoOfClicks = parseInt(localStorage.getItem('clickersNoOfClicks')) ||
 let clickersStateGate = parseInt(localStorage.getItem('clickersStateGate')) || 0;
 let mainClickersUpgradeState = parseInt(localStorage.getItem('mainClickersUpgradeState')) || 0;
 let tenCounter = parseInt(localStorage.getItem('tenCounter')) || 0;
+let grandResetGate = 1;
 let clickersState = 0
 
 // Functions
@@ -98,6 +99,24 @@ function clickersUpgrade() {
   clickersNoOfClicks += 5;
 }
 
+function grandReset () {
+  if (grandResetGate === 1 && !localStorage.getItem('hasCleared')) {
+    alert('I am sorry but its the grand reset... All of your porgress have been lost, but in our hearts it has not. Think of this as a new chapter, where you leveled up.');
+    clicks = 0;
+    noOfClicks = 1;
+    type = 1;
+    clickersNoOfClicks = 5;
+    clickersStateGate = 0;
+    mainClickersUpgradeState = 0;
+    tenCounter = 0;
+    localStorage.clear();
+    localStorage.setItem('hasCleared', true);
+    updateUpgradeText();
+    clickCountElement.innerHTML = `Clicks: ${clicks}`;
+    currentPerClickElement.innerHTML = `${noOfClicks} per click`;
+  }
+}
+
 function init() {
   updateUpgradeText();
   clickCountElement.innerHTML = `Clicks: ${clicks}`;
@@ -112,6 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     document.getElementById("loader").style.display = "none";
     document.getElementById("loaderDiv").style.display = "block";
+    grandReset();
     init();
     const clickSound = new Audio("audio/click.mp3");
     const upgradeSound = new Audio("audio/upgrade.mp3");
