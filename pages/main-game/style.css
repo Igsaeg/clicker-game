@@ -5,6 +5,7 @@
 
 body {
   font-family: 'Metropolis';
+  background-image: linear-gradient(to right, #ffafbd , #ffc3a0);
 }
 
 /* Loader */
@@ -19,7 +20,7 @@ body {
   height: 80px;
   border: 10px solid transparent;
   border-radius: 50%;
-  border-top: 10px solid #f0adc5;
+  border-top: 10px solid white;
   animation: spin 1s linear infinite;
   transform-origin: center center;
   animation-fill-mode: forwards;
@@ -62,6 +63,7 @@ button {
   border-radius: 10px;
   font-family: 'Metropolis';
   box-shadow: 0 9px #999;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button:active {
