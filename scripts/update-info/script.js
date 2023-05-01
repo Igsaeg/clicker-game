@@ -13,8 +13,8 @@ function anchorUp() {
 
 // Initialization
 document.addEventListener("DOMContentLoaded", () => {
-    setTimeout(() => {
-      document.getElementById("loader").style.display = "none";
-      document.getElementById("loaderDiv").style.display = "block";
-    }, 1500);
-  });
+  setTimeout(() => {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("loaderDiv").style.display = "block";
+  }, 1500);
+});
