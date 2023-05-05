@@ -71,11 +71,11 @@ button:active {
   transform: translateY(4px);
 }
 
-button.check {
+button#check {
   margin-top: 15px;
 }
 
-input {
+input#input {
   display: inline-block;
   padding: 18px 38px;
   font-size: 25px;
@@ -90,7 +90,7 @@ input {
   -webkit-tap-highlight-color: transparent;
 }
 
-h1.title {
+h1#title {
   margin-top: 75px;
   font-size: 55px;
   margin-bottom: 130px;
@@ -100,6 +100,7 @@ h1#scrambledText {
   font-size: 40px;
 }
 
-h2 {
+h2#scoreText {
   font-size: 28px;
+  margin-bottom: 60px;
 }

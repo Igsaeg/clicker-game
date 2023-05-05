@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="media/icon.png"/>
+    <title>Save Progress</title>
+    <link rel="stylesheet" href="scripts/save-progress/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+    <div id="loader"></div>
+
+    <div style="display:none;" id="loaderDiv" class="animation">
+        <h1 id="title">Save Progress</h1>
+        <h1 class="textHeader">Download progress</h1>
+            <p class="text">
+            To save your progress, press download txt, it will download a text file containing your encryted code.
+            </p>
+
+        <button id="download" onclick="downloadFile()">Download txt</button>
+
+        <h1 class="textHeader">Load progress</h1>
+            <p class="text">
+            To load your progress, press upload txt, upload the txt file with your encrypted code.
+            </p>
+
+        <input type="file" id="fileInput" multiple="false">
+        <label for="fileInput">Upload txt</label>
+
+        <h1 class="textHeader">Confused?</h1>
+            <p class="text">
+            Here's a video the better understand!
+            </p>
+
+            <video width="408" height="230" controls>
+                <source src="media/save-progress-tutorial.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>              
+        <br>
+        <button id="back" onclick="backToGame()">Go back</button>
+
+    </div>
+
+    <script src="scripts/variables.js"></script>
+    <script src="scripts/save-progress/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+@font-face {
+  font-family: Metropolis;
+  src: url(../../fonts/Metropolis-Bold.otf);
+}
+    
+body {
+  font-family: 'Metropolis';
+  background-image: linear-gradient(to right, #ffafbd , #ffc3a0);
+}
+  
+/*loader*/
+  
+#loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 80px;
+  height: 80px;
+  border: 10px solid transparent;
+  border-radius: 50%;
+  border-top: 10px solid white;
+  animation: spin 1s linear infinite;
+  transform-origin: center center;
+  animation-fill-mode: forwards;
+  margin: -40px 0 0 -40px;
+}
+    
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+    
+@keyframes animation {
+  from{ bottom:-40px; opacity:0 }
+  to{ bottom: 0px; opacity: 1}
+}
+    
+.animation {
+  position: relative;
+  animation: animation 1s;  
+}
+    
+#loaderDiv {
+  display: none;
+  text-align: center;
+}
+
+/*main page */
+
+button, input#fileInput + label {
+  display: inline-block;
+  padding: 18px 38px;
+  font-size: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  color: #fff;
+  background-color: #f0adc5;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Metropolis';
+  box-shadow: 0 9px #999;
+  -webkit-tap-highlight-color: transparent;
+}
+    
+button:active {
+  background-color: #df7298;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+input#fileInput + label:active {
+  background-color: #df7298;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+button#back {
+  margin-top: 15px;
+  margin-bottom: 60px;
+}
+  
+h1#title {
+  margin-top: 75px;
+  font-size: 55px;
+  margin-bottom: 100px;
+}
+
+h1.textHeader {
+  font-size: 35px;
+}
+
+p.text {
+  font-size: 28px;
+}
+
+input#fileInput {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}

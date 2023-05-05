@@ -12,11 +12,6 @@ let clicksAdded = 0;
 let clicksAddedGate = 1;
 
 // Functions
-function saveProgress() {
-  localStorage.setItem('clicks', clicks);
-}
-setInterval(saveProgress, 0)
-
 function initGame() {
   wordPicker = words[Math.floor(Math.random() * words.length)];
   let wordArray = wordPicker.word.split("");
@@ -109,20 +104,17 @@ function revealScore() {
     alert('Sorry! You got none right... Clicks added ' + clicksAdded)
   }  
   countdownToBack()
+  timerToMinigame = 901;
 }
 
 function countdownToBack() {
-  let timerToBack = 1;
+  let timerToBack = 2;
   setInterval(() => {
     timerToBack--;
     if (timerToBack === 0) {
-      backToGame()
+      window.location.href = "index.html";
     }
-  }, 1000)
-}
-
-function backToGame() {
-  window.location.href = "index.html";
+  }, 100)
 }
 
 // Event Listiners
@@ -134,15 +126,13 @@ userInputElement.addEventListener('keydown', event => {
 
 // Initialization
 document.addEventListener("DOMContentLoaded", () => {
-  let timerToMinigame = parseInt(localStorage.getItem('timerToMinigame'));
-  if (timerToMinigame === 0) {
+  if (timerToMinigame === 1) {
     setTimeout(() => {
       document.getElementById("loader").style.display = "none";
       document.getElementById("loaderDiv").style.display = "block";
       initGame()
     }, 2500)
-  }
-  else {
-    backToGame();
+  } else {
+    window.location.href = "index.html";
   }
 });

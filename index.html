@@ -3,7 +3,7 @@
 <head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="images/icon.png"/>
+    <link rel="icon" type="image/png" href="media/icon.png"/>
     <title>Kapogian Clicker</title>
     <link rel="stylesheet" href="scripts/main-game/style.css">
 </head>
@@ -11,18 +11,19 @@
     <div id="loader"></div>
 
     <div style="display:none;" id="loaderDiv" class="animation">
-        <h1 class="title">Kapogian Clicker</h1>
+        <h1 id="title">Kapogian Clicker</h1>
         <h1 id="clickCount">Clicks: 0</h1>
 
-        <button class="click" onclick="add()">Click</button>
+        <button id="click" onclick="add()">Click</button>
 
-        <h1 class="statusText">Status:</h1>
+        <h1 id="statusText">Status:</h1>
         <h2 id="currentPerClick">1 per click</h1>
         <h2 id="upgradeText">Next upgrade: 200 clicks</h1>
 
-        <button class="upgrade" onclick="upgrade()">Upgrade</button>
+        <button id="upgrade" onclick="upgrade()">Upgrade</button> <br>
+        <button id="saveProgress" onclick="goToSaveProgress()">Save Progress</button>
 
-        <a href="update-info.html"><p class="versionText">v3.0 - update logs</p></a>
+        <a href="update-logs.html"><p id="versionText">v3.5 - update logs</p></a>
     </div>
 
     <script src="scripts/main-game/script.js"></script>

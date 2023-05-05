@@ -6,7 +6,7 @@ let clickersNoOfClicks = parseInt(localStorage.getItem('clickersNoOfClicks')) ||
 let clickersStateGate = parseInt(localStorage.getItem('clickersStateGate')) || 0;
 let mainClickersUpgradeState = parseInt(localStorage.getItem('mainClickersUpgradeState')) || 0;
 let tenCounter = parseInt(localStorage.getItem('tenCounter')) || 0;
-let timerToMinigame = parseInt(localStorage.getItem('timerToMinigame')) || 1200;
+let timerToMinigame = parseInt(localStorage.getItem('timerToMinigame')) || 901;
 let clickersState = 0
 
 // Functions

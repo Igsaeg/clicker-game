@@ -116,7 +116,7 @@ let words = [
         hint: "The process of goods being transported from a ship"
     },
     {
-        word: "plane",
+        word: "airplane",
         hint: "The vehicle where people are transported high above"
     },
     {

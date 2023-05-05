@@ -66,17 +66,37 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
+button#saveProgress {
+  display: inline-block;
+  padding: 18px 38px;
+  font-size: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  outline: 2px solid transparent;
+  color: #fff;
+  background-color: #f0adc5;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Metropolis';
+  box-shadow: 0 9px #999;
+  -webkit-tap-highlight-color: transparent;
+}
+
 button:active {
   background-color: #df7298;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
-button.upgrade {
+button#upgrade {
+  margin-bottom: 30px;  
+}
+
+button#saveProgress {
   margin-bottom: 50px;  
 }
 
-h1.title {
+h1#title {
   margin-top: 75px;
   font-size: 55px;
   margin-bottom: 100px;
@@ -86,7 +106,7 @@ h1#clickCount {
   font-size: 40px;
 }
 
-h1.statusText {
+h1#statusText {
   font-size: 40px;
 }
 
@@ -94,6 +114,6 @@ h2#currentPerClick, h2#upgradeText {
   font-size: 30px;
 }
 
-p.versionText {
+p#versionText {
   margin-bottom: 60px;
 }

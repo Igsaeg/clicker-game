@@ -80,8 +80,7 @@ function addClicks() {
   if (clicksAddedGate === 1) {
     clicks += clicksAdded;
     clickCountElement.innerHTML = `Clicks: ${clicks}`;
-    localStorage.setItem('clicksAdded', 0);
-    localStorage.setItem('clicksAddedGate', 0);
+    localStorage.clear();
   }
 }
 
@@ -89,18 +88,28 @@ function init() {
   updateUpgradeText();
   clickCountElement.innerHTML = `Clicks: ${clicks}`;
   currentPerClickElement.innerHTML = `${noOfClicks} per click`;
-  if (clickersStateGate === 1) {
-    alert('Reminder! Clickers wont start automatically. Press the click button to reactivate it!')
-  }
+  initMinigameTimer();
+  addClicks();
 }
 
 function initMinigameTimer() {
-  setInterval(() => {
-    timerToMinigame--;
-    if (timerToMinigame === 0) {
-      window.location.href = "word-scramble.html";
+  let timerId = setInterval(() => {
+    if (timerToMinigame >= 2) {
+      timerToMinigame--;
+    } else {
+      clearInterval(timerId);
+      if (confirm("Its time for a minigame! Do you wish to proceed")) {
+        window.location.href = "word-scramble.html";
+      } else {
+        timerToMinigame = 901;
+        initMinigameTimer();
+      }
     }
-  }, 1000)
+  }, 1000);
+}
+
+function goToSaveProgress() {
+  window.location.href = "save-progress.html";
 }
 
 // Initialization
@@ -109,9 +118,5 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("loader").style.display = "none";
     document.getElementById("loaderDiv").style.display = "block";
     init();
-    initMinigameTimer();
-    addClicks();
-    const clickSound = new Audio("audio/click.mp3");
-    const upgradeSound = new Audio("audio/upgrade.mp3");
   }, 3000);
 });

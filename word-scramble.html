@@ -4,15 +4,16 @@
     <meta name="robots" content="noindex">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="images/icon.png"/>
+    <link rel="icon" type="image/png" href="media/icon.png"/>
     <title>Kapogian Minigame</title>
     <link rel="stylesheet" href="scripts/word-scramble/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 </head>
 <body>
     <div id="loader"></div>
 
     <div style="display:none;" id="loaderDiv" class="animation">
-        <h1 class="title">Word Scramble</h1>
+        <h1 id="title">Word Scramble</h1>
         <h1 id="scrambledText"></h2>
         <h2 id="hintText"></h2>
 
@@ -20,8 +21,8 @@
 
         <br>
 
-        <button class="refresh" onclick="refreshWord()">Refresh</button>
-        <button class="check" onclick="checkWord()">Check</button>
+        <button id="refresh" onclick="refreshWord()">Refresh</button>
+        <button id="check" onclick="checkWord()">Check</button>
 
         <h2 id="scoreText">0/5 correct - 5 tries remaining</h2>
     </div>
