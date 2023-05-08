@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta name="robots" content="noindex">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,27 +8,25 @@
     <title>Kapogian Minigame</title>
     <link rel="stylesheet" href="scripts/word-scramble/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div id="loader"></div>
 
     <div style="display:none;" id="loaderDiv" class="animation">
-        <h1 id="title">Word Scramble</h1>
-        <h1 id="scrambledText"></h2>
-        <h2 id="hintText"></h2>
+      <h1 id="title">Word Scramble</h1>
+      <h1 id="scrambledText"></h2>
+      <h2 id="hintText"></h2>
 
-        <input type="text" id="input" placeholder="Enter a word" autofocus>
+      <input type="text" id="input" placeholder="Enter a word" autofocus>
+      <br>
+      <button id="refresh" onclick="refreshWord()">Refresh</button>
+      <button id="check" onclick="checkWord()">Check</button>
 
-        <br>
-
-        <button id="refresh" onclick="refreshWord()">Refresh</button>
-        <button id="check" onclick="checkWord()">Check</button>
-
-        <h2 id="scoreText">0/5 correct - 5 tries remaining</h2>
+      <h2 id="scoreText">0/5 correct - 5 tries remaining</h2>
     </div>
 
     <script src="scripts/word-scramble/script.js"></script>
     <script src="scripts/word-scramble/words.js"></script>
     <script src="scripts/variables.js"></script>
-</body>
+  </body>
 </html>

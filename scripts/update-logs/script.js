@@ -1,8 +1,4 @@
 // Functions
-function backToGame() {
-  window.location.href = "index.html";
-}
-
 function anchorDown() {
   document.querySelector("#down").scrollIntoView({behavior: "smooth"});
 }
@@ -35,3 +31,14 @@ document.addEventListener("DOMContentLoaded", () => {
     initMinigameTimer();
   }, 1500);
 });
+
+// Navigation
+function navLogic() {
+  if (navGate === 0) {
+    document.getElementById("sidenav").style.width = "250px";
+    navGate = 1;
+  } else {
+    document.getElementById("sidenav").style.width = "0";
+    navGate = 0;
+  }
+}

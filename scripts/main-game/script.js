@@ -108,10 +108,6 @@ function initMinigameTimer() {
   }, 1000);
 }
 
-function goToSaveProgress() {
-  window.location.href = "save-progress.html";
-}
-
 // Initialization
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
@@ -120,3 +116,14 @@ document.addEventListener("DOMContentLoaded", () => {
     init();
   }, 3000);
 });
+
+// Navigation
+function navLogic() {
+  if (navGate === 0) {
+    document.getElementById("sidenav").style.width = "250px";
+    navGate = 1;
+  } else {
+    document.getElementById("sidenav").style.width = "0";
+    navGate = 0;
+  }
+}

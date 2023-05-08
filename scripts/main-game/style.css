@@ -6,6 +6,7 @@
 body {
   font-family: 'Metropolis';
   background-image: linear-gradient(to right, #ffafbd , #ffc3a0);
+  text-align: center;
 }
 
 /* Loader */
@@ -45,7 +46,6 @@ body {
 
 #loaderDiv {
   display: none;
-  text-align: center;
 }
 
 /* Main game */
@@ -63,23 +63,12 @@ button {
   border-radius: 10px;
   font-family: 'Metropolis';
   box-shadow: 0 9px #999;
+  transition: 0.05s;
   -webkit-tap-highlight-color: transparent;
 }
 
-button#saveProgress {
-  display: inline-block;
-  padding: 18px 38px;
-  font-size: 25px;
-  cursor: pointer;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  color: #fff;
-  background-color: #f0adc5;
-  border: none;
-  border-radius: 10px;
-  font-family: 'Metropolis';
-  box-shadow: 0 9px #999;
-  -webkit-tap-highlight-color: transparent;
+button#upgrade {
+  margin-bottom: 30px;  
 }
 
 button:active {
@@ -88,16 +77,18 @@ button:active {
   transform: translateY(4px);
 }
 
-button#upgrade {
-  margin-bottom: 30px;  
+a#openSidenav {
+  font-size: 50px;
+  color: #fff;
+  transition: 0.3s;
 }
 
-button#saveProgress {
-  margin-bottom: 50px;  
+a#openSidenav:hover {
+  color: #555;
 }
 
 h1#title {
-  margin-top: 75px;
+  margin-top: 22px;
   font-size: 55px;
   margin-bottom: 100px;
 }
@@ -110,10 +101,63 @@ h1#statusText {
   font-size: 40px;
 }
 
-h2#currentPerClick, h2#upgradeText {
+h2#currentPerClick, 
+h2#upgradeText {
   font-size: 30px;
 }
 
 p#versionText {
   margin-bottom: 60px;
+}
+
+/* Sidebar */
+
+div#sidenav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 0;
+  height: 100%;
+  overflow-x: hidden;
+  background: #555;
+  transition: 0.5s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+div#sidenav a,
+div#sidenav h2 {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+  margin-bottom: 20px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#sidenav #close {
+  position: absolute;
+  top: 15px;
+  right: 206px;
+  font-size: 40px;
+}
+
+div#sidenav h2 {
+  font-size: 34px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+div#sidenav a:hover {
+  color: #f0adc5;
+  cursor: pointer;
+}
+
+div#sidenav a:active {
+  color: #df7298;
+  cursor: pointer;
+}
+
+div#stickToLeft {
+  text-align: left;
 }

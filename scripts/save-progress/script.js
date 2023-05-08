@@ -69,10 +69,6 @@ function loadProgress(decryptedInfo) {
   timerToMinigame = infoTimerToMinigame;
 }
 
-function backToGame() {
-  window.location.href = "index.html";
-}
-
 function initMinigameTimer() {
   let timerId = setInterval(() => {
     if (timerToMinigame >= 2) {
@@ -99,3 +95,14 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("loaderDiv").style.display = "block";
   }, 1500);
 });
+
+// Navigation
+function navLogic() {
+  if (navGate === 0) {
+    document.getElementById("sidenav").style.width = "250px";
+    navGate = 1;
+  } else {
+    document.getElementById("sidenav").style.width = "0";
+    navGate = 0;
+  }
+}

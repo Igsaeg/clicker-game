@@ -49,10 +49,11 @@ body {
 }
 
 /* Main game */
+
 button {
   display: inline-block;
-  padding: 18px 38px;
-  font-size: 25px;
+  padding: 22px 42px;
+  font-size: 32px;
   cursor: pointer;
   text-decoration: none;
   outline: 2px solid transparent;
@@ -62,8 +63,9 @@ button {
   border-radius: 10px;
   font-family: 'Metropolis';
   box-shadow: 0 9px #999;
+  transition: 0.05s;
   -webkit-tap-highlight-color: transparent;
-  }
+}
   
 button:active {
   background-color: #df7298;

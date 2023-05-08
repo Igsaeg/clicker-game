@@ -1,54 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="media/icon.png"/>
     <title>Update Logs</title>
     <link rel="stylesheet" href="scripts/update-logs/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-</head>
-<body> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  </head>
+  <body> 
     <div id="loader"></div>
 
     <div style="display:none;" id="loaderDiv" class="animation">
-        <h1 id="title">Update Logs</h1>
+      <div id="sidenav">
+        <a id="close" onclick="navLogic()">&times;</a>
+        <h2>Pages</h2>
+        <a href="index.html">&bull; Clicker game</a>
+        <a href="save-progress.html">&bull; Save progress</a>
+      </div>
 
-        <button id="back" onclick="backToGame()">Go back</button>
-        <br>
-        <button id="goToLatest" onclick="anchorDown()">Go to latest</button>
-
-        <h1 class="textHeader">Version v1.5 (March 17, 2023 - March 22, 2023):</h1>
-            <p class="text">-Added an update log (this page).</p>
-            <p class="text">-Made the per click go up by one instead of by five.</p>
-            <p class="text">-Made the upgrade requirements go up by 200 every upgrade.</p>
-            <p class="text">-Added more upgrade requirements to keep the game going.</p>
-            <p class="text">-Added audio to prevent boredness.</p>
-
-        <h1 class="textHeader">Version v2.0 (March 22, 2023 - March 24, 2023):</h1>
-            <p class="text">-Fixed update log layout.</p>
-            <p class="text">-Changed upgrade sound.</p>
-            <p class="text">-Fixed some bugs.</p>
-            <p class="text">-Intended to add clickers that clicks for you, but that will come another time ;&#41;</p>
+      <div id="stickToLeft"><a id="openSidenav" onclick="navLogic()"><i class="bi bi-list"></i></a></div>
         
-        <h1 class="textHeader">Version v2.5 (March 24, 2023 - March 26, 2023):</h1>
-            <p class="text">-Finally added clickers.</p>
-            <p class="text">-Added background color.</p>
-            <p class="text">-Changed title icon.</p>
-            <p class="text">-Changed loading color to white.</p>
-            <p class="text">-Added anchor links in update logs.</p>
-            <p class="text">-Made update logs more discoverable.</p>
-            <p class="text">-Held the grand reset due to updates.</p>
+      <h1 id="title">Update Logs</h1>
 
-        <h1 class="textHeader">Version v3.0 (March 26, 2023 - May 1, 2023):</h1>
-            <p class="text">-Added a word scramble minigame that occurs every 20 minutes.</p>
-            <p class="text">-Planning to add more minigames in the future.</p>
-            <p class="text">-Improved security.</p>
+      <button id="goToLatest" onclick="anchorDown()">Go to latest</button>
 
-        <h1 class="textHeader">Version v3.5 (May 1, 2023 - May 5, 2023):</h1>
-            <p class="text">-You can finaly save and upload your progress, <a href="save-progress.html">watch the video</a>.</p>
-            <p class="text">-Changed minigame to occur every 15 minutes.</p>
-            <p class="text">-Fixed major bugs.</p>
+      <h1 class="textHeader">Version v1.5 (March 17, 2023 - March 22, 2023):</h1>
+        <p class="text">-Added an update log (this page).</p>
+        <p class="text">-Made the per click go up by one instead of by five.</p>
+        <p class="text">-Made the upgrade requirements go up by 200 every upgrade.</p>
+        <p class="text">-Added more upgrade requirements to keep the game going.</p>
+        <p class="text">-Added audio to prevent boredness.</p>
+
+      <h1 class="textHeader">Version v2.0 (March 22, 2023 - March 24, 2023):</h1>
+        <p class="text">-Fixed update log layout.</p>
+        <p class="text">-Changed upgrade sound.</p>
+        <p class="text">-Fixed some bugs.</p>
+        <p class="text">-Intended to add clickers that clicks for you, but that will come another time ;&#41;</p>
+        
+      <h1 class="textHeader">Version v2.5 (March 24, 2023 - March 26, 2023):</h1>
+        <p class="text">-Finally added clickers.</p>
+        <p class="text">-Added background color.</p>
+        <p class="text">-Changed title icon.</p>
+        <p class="text">-Changed loading color to white.</p>
+        <p class="text">-Added anchor links in update logs.</p>
+        <p class="text">-Made update logs more discoverable.</p>
+        <p class="text">-Held the grand reset due to updates.</p>
+
+      <h1 class="textHeader">Version v3.0 (March 26, 2023 - May 1, 2023):</h1>
+        <p class="text">-Added a word scramble minigame that occurs every 20 minutes.</p>
+        <p class="text">-Planning to add more minigames in the future.</p>
+        <p class="text">-Improved security.</p>
+
+      <h1 class="textHeader">Version v3.5 (May 1, 2023 - May 5, 2023):</h1>
+        <p class="text">-You can finaly save and upload your progress, <a href="save-progress.html">watch the video</a>.</p>
+        <p class="text">-Changed minigame to occur every 15 minutes.</p>
+        <p class="text">-Fixed major bugs.</p>
+
+      <h1 class="textHeader">Version v4.0 (May 5, 2023 - May 7, 2023):</h1>
+        <p class="text">-Made a pages menu in the top left corner or <a href="javascript:void(0)" onclick="navLogic()">try here</a>.</p>
+        <p class="text">-Removed redirect buttons.</p>
+        <p class="text">-Made button press more smoother.</p>
 
         <button id="goToTop" onclick="anchorUp()">Go to top</button>
     </div>
@@ -57,5 +69,5 @@
 
     <script src="scripts/update-logs/script.js"></script>
     <script src="scripts/variables.js"></script>
-</body>
+  </body>
 </html>

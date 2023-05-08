@@ -8,6 +8,7 @@ let mainClickersUpgradeState = parseInt(localStorage.getItem('mainClickersUpgrad
 let tenCounter = parseInt(localStorage.getItem('tenCounter')) || 0;
 let timerToMinigame = parseInt(localStorage.getItem('timerToMinigame')) || 901;
 let clickersState = 0
+let navGate = 0;
 
 // Functions
 function saveProgress() {

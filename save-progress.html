@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+  <head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="media/icon.png"/>
     <title>Save Progress</title>
     <link rel="stylesheet" href="scripts/save-progress/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div id="loader"></div>
 
     <div style="display:none;" id="loaderDiv" class="animation">
-        <h1 id="title">Save Progress</h1>
-        <h1 class="textHeader">Download progress</h1>
-            <p class="text">
-            To save your progress, press download txt, it will download a text file containing your encryted code.
-            </p>
+      <div id="sidenav">
+        <a id="close" onclick="navLogic()">&times;</a>
+        <h2>Pages</h2>
+        <a href="index.html">&bull; Clicker game</a>
+        <a href="update-logs.html">&bull; Update Logs</a>
+      </div>
 
-        <button id="download" onclick="downloadFile()">Download txt</button>
+      <div id="stickToLeft"><a id="openSidenav" onclick="navLogic()"><i class="bi bi-list"></i></a></div>
+      
+      <h1 id="title">Save Progress</h1>
+      <h1 class="textHeader">Download progress</h1>
+      <p class="text">To save your progress, press download txt, it will download a text file containing your encryted code.</p>
 
-        <h1 class="textHeader">Load progress</h1>
-            <p class="text">
-            To load your progress, press upload txt, upload the txt file with your encrypted code.
-            </p>
+      <button id="download" onclick="downloadFile()">Download txt</button>
 
-        <input type="file" id="fileInput" multiple="false">
-        <label for="fileInput">Upload txt</label>
+      <h1 class="textHeader">Load progress</h1>
+      <p class="text">To load your progress, press upload txt, upload the txt file with your encrypted code.</p>
 
-        <h1 class="textHeader">Confused?</h1>
-            <p class="text">
-            Here's a video the better understand!
-            </p>
+      <input type="file" id="fileInput" multiple="false">
+      <label for="fileInput">Upload txt</label>
 
-            <video width="408" height="230" controls>
-                <source src="media/save-progress-tutorial.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>              
-        <br>
-        <button id="back" onclick="backToGame()">Go back</button>
-
+      <h1 class="textHeader">Confused?</h1>
+      <p class="text">Here's a video the better understand! Watch in fullscreen for better resolution.</p>
+      
+      <video id="video" width="408" height="230" controls>
+        <source src="media/save-progress-tutorial.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
     </div>
 
     <script src="scripts/variables.js"></script>
     <script src="scripts/save-progress/script.js"></script>
-</body>
+  </body>
 </html>
