@@ -22,14 +22,16 @@ I've picked many things with this projects that peaked my interest in developmen
 - **HTML**: I learned how to structure websites.
   - Creating elements
   - Structuring
+  - Managin different pages
 - **CSS**: I discovered how to design and personalize them.
   - Basic design principle
 - **JavaScript**: I found out how to manage logic and interactivity.
   - Variables and Constants
   - Functions
   - Basic Logic (if and or statements)
-  - Utilizing local cache
-  - Accessing and modifying HTML elements
+  - Utilizing local cache via `localStorage`.
+  - Accessing and modifying HTML elements using `document.querySelector()`.
+  - Watching certain events by using `addEventListener()`.
 
 ### 🐈 Github
 - **Hosting Websites**: I learned how to share projects using GitHub.
@@ -39,3 +41,6 @@ I've picked many things with this projects that peaked my interest in developmen
 
 ### 🔊 Audio
 - **Handling Audio**: I learned how to manage and add sounds to my page.
+
+## 📈 Overall Growth
+Starting development, I would say this was a nice project to start on and get used to the workflow of web developing. I built this page right after watching a couple of tutorials applying what i've learned. 
