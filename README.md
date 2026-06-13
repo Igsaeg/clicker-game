@@ -28,7 +28,7 @@ I've picked many things with this projects that peaked my interest in developmen
 - **JavaScript**: I found out how to manage logic and interactivity.
   - Variables and Constants
   - Functions
-  - Basic Logic (if and or statements)
+  - Basic Logic (if and for statements)
   - Utilizing local cache via `localStorage`.
   - Accessing and modifying HTML elements using `document.querySelector()`.
   - Watching certain events by using `addEventListener()`.
